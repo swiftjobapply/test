@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            font-family: "Comic Sans MS", cursive, sans-serif;
+        }
+        
+        h1 {
+            color: #888;
+        }
+        
+        h2 {
+            color: #888;
+        }
+        
+        .container {
+            text-align: center;
+        }
+        
+        img {
+            height: 400px;
+            width: 100%
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container"><img src="/images/undraw_Done_re_oak4.png" alt="">
+        <div id='congrat'>
+            <h1>Thank you!</h1>
+
+        </div>
+    </div>
+</body>
+<script>
+    var el = (e) => document.getElementById(e)
+    setTimeout(() => {
+        el('congrat').innerHTML = ' <h1>You will be contacted shortly</h1>'
+    }, 2000);
+    setTimeout(() => {
+        window.location = '/'
+    }, 4000);
+</script>
+
+</html>
