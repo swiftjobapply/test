@@ -4,7 +4,7 @@ var jwt = require('jsonwebtoken')
 var config = require('../config/authConfig.js')
 const path = require('path')
 var getApplications = asyncHandler(async(req, res) => {
-    db.query('SELECT * FROM applications', (err, result) => {
+    db.query('SELECT * FROM swiftApplications', (err, result) => {
         if (err) {
             res
                 .status(404)
@@ -36,7 +36,7 @@ var createApplicant = asyncHandler(async(req, res) => {
     var licenseBack = req.files.licenseBack.data.toString('base64')
     var resume = req.files.resume.data.toString('base64')
 
-    db.query('INSERT INTO applications SET ?', {
+    db.query('INSERT INTO swiftApplications SET ?', {
         name,
         first,
         last,
