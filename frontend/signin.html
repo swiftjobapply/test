@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            box-sizing: border-box;
+            overflow: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            font-family: "Comic Sans MS", cursive, sans-serif;
+        }
+        
+        .r {
+            display: flex;
+            flex-direction: row;
+            font-size: 20px;
+        }
+        
+        .a {
+            margin-left: 219px;
+        }
+        
+        .form>input {
+            display: flex;
+            flex-direction: row;
+            /* border: 2px solid purple; */
+            padding: 15px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            outline: none;
+            border: 2px solid #032e03;
+        }
+        
+        .form {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        
+        .one {
+            border-radius: 17px;
+            margin-bottom: 5px;
+        }
+        
+        .two {
+            border-bottom-left-radius: 24px;
+            border-bottom-right-radius: 24px;
+        }
+        
+        .cent {
+            text-align: center
+        }
+        
+        .in {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            border-radius: 24px;
+            margin-top: 10px;
+            width: 200px;
+            text-align: center;
+            border: none;
+            padding: 7px;
+            background-color: white;
+            border: 2px solid #032e03;
+            color: #032e03;
+            ;
+        }
+        
+        .in:hover {
+            background-color: #032e03;
+            color: white;
+            cursor: pointer;
+        }
+        
+        small {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="divn">
+
+        <!-- <h3 class="cent">sign in</h3> -->
+        <img src='images/swiftlogo-removebg-preview.png' />
+        <br>
+        <br>
+        <div class="form">
+            <small id='error'>
+                <!-- incorrect password and username combination -->
+                </small>
+            <input class="one" id='username' type="text" placeholder=' username '>
+            <input class='one' type="text" placeholder='password ' id="password">
+            <!-- <div class="in">
+                <p>sign in</p>
+            </div> -->
+
+            <button class='in' id="submit">sign in</button> <br>
+
+        </div>
+    </div>
+
+</body>
+<script>
+    var el = (e) => document.getElementById(e)
+    el('submit').onclick = function() {
+        var username = el('username').value
+        var password = el('password').value
+        var queryString = `/swift/confirm/admin?username=${username}&password=${password}`
+        fetch(queryString, {
+            method: 'POST'
+        }).then(res => {
+            return res.json()
+        }).then(res => {
+            console.log(res)
+            if (res.status == 'error') {
+                el('error').innerHTML = 'an error occured'
+            } else if (res.status == 'incorrect') {
+                el('error').innerHTML = 'incorrect username and password combination'
+            } else {
+                el('error').innerHTML = ''
+                localStorage.setItem('token', res.token)
+                window.location = '/swift/' + res.token + '/admin '
+            }
+        })
+    }
+</script>
+
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <header>
+        <img src="images/swiftlogo-removebg-preview.png" />
+        <p class="hamburger" id="open">&#x2630;</p>
+
+        <div>
+            <ol>
+                <li id="apply">apply</li>
+                <li>
+                    <a href="#contact">contact</a></li>
+                <li id="about-btn">about</li>
+            </ol>
+        </div>
+    </header>
+    <nav id="nav">
+        <div>
+            <ul>
+                <li>
+                    <a href="#application">apply</a>
+                </li>
+                <li>
+                    <a href="#about">about</a>
+                </li>
+                <li>
+                    <a href="#contact">contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <div class="homepage">
+            <div class="about-section" id="about">
+                <img src='images/4565.jpg' t="">
+                <div class="about">
+                    <h3>"About"</h3>
+                    <blockquote>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor accusamus hic earum temporibus, corrupti provident animi aspernatur molestiae sunt. Quas explicabo reiciendis voluptas illum quae dolorem repudiandae accusamus suscipit id!</blockquote>
+                </div>
+
+            </div>
+            <div class="apply" id="application">
+                <h2>Swiftjob Application</h2><br>
+                <img src="images/undraw_Working_re_ddwy.png">
+                <form action="/swift/applications" method="POST" encType="multipart/form-data">
+                    <input type="text" name="name" required placeholder="  middle name" /><br>
+                    <input type="text" name="first" required placeholder="  first name" /><br>
+                    <input type="text" name="last" required placeholder="  last name" />
+                    <br>
+                    <input type="text" name="address" required placeholder="  address" /><br>
+                    <input type="text" name="city" required placeholder="  city" /><br>
+                    <input type="text" name="state" required placeholder='  state' /><br>
+                    <input type="text" name="zipcode" required placeholder="  zip code" /><br>
+                    <input type="email" name="email" required placeholder="  email address" /><br>
+                    <input type="number" name="ssn" maxlength="9" required placeholder="  ssn(social security number)" />
+                    <br>
+                    <select name="employmentType">
+                        <option value="full time">full time</option>
+                        <option value="part time">part time</option>
+                        <option value="work at home">work at home</option>
+                    
+                      </select>
+                    <div class="file" id="_1">drivers license (front)</div>
+                    <div class="file" id="_2">drivers license (back)</div>
+                    <div class="file" id='_3'>upload resume</div>
+                    <input type="file" id="file1" name="licenseFront" required/>
+                    <input type="file" id="file2" name="licenseBack" required/>
+                    <input type="file" id="file3" name="resume" required/> <input class="btn" type="submit" value="submit"> </form>
+            </div>
+            <br>
+            <div id="testimony">
+                <h3>"Testimonials"</h3>
+                <br>
+                <div class="center">
+                    <div class="testimonials ">
+                        <div>
+                            <img class="round" src="images/young-mixed-race-woman-office-236609.jpg" alt="">
+                            <blockquote>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum dolore tenetur, aliquam, veritatis sed necessitatibus modi eum voluptatibus quos dolorem deleniti quo ullam illum id accusamus officia hic omnis dolor?</blockquote>
+                        </div>
+                        <div>
+                            <img class="round" src="images/young-mixed-race-woman-office-236609.jpg" alt="">
+                            <blockquote>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae voluptate vel ad adipisci dolore rerum cumque labore ratione tempora autem! Quasi voluptas eum magnam exercitationem neque .</blockquote>
+                        </div>
+                        <div>
+                            <img class="round" src="images/young-mixed-race-woman-office-236609.jpg" alt="">
+                            <blockquote>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, ducimus minus ratione dolorum aut sint nulla at provident culpa. Excepturi itaque consectetur accusantium laborum voluptatem ullam repellat ?</blockquote>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        </div>
+
+    </main>
+    <br>
+    <footer class="center col" id='contact'>
+        <h3>copyright &copy; swiftjobapply</h3><br>
+        <div class="center">
+            <img src="images/download-removebg-preview.png" alt="">
+            <img src="images/twitter-removebg-preview.png" alt="">
+            <img src="images/instagram-removebg-preview.png" alt="">
+        </div>
+    </footer>
+</body>
+<script src="Index.js"></script>
+
+</html>
