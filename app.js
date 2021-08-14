@@ -6,7 +6,7 @@ var app = express()
 app.use(fileUpload());
 app.use(bodyParser.urlencoded({ limit: '10mb', extended: true }))
 app.use('/swift', routes)
-var port = 5000
+var port = process.env.PORT || 5000
 app.listen(port)
 app.get('/',(req,res)=>{
 res.send('choke ooo')
