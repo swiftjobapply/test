@@ -1,14 +1,5 @@
 var el = (e) => document.getElementById(e);
-el('_1').onclick = function() {
-    el('file1').click()
-}
-el('_2').onclick = function() {
-    el('file2').click()
-}
-el('_3').onclick = function() {
-    el('file3').click()
 
-}
 var open = false
 el('open').onclick = () => {
     if (!open) {
