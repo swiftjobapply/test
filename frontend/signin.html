@@ -126,7 +126,7 @@
                 el('error').innerHTML = 'incorrect username and password combination'
             } else {
                 el('error').innerHTML = ''
-                localStorage.setItem('token', res.token)
+                sessionStorage.setItem('token', res.token)
                 window.location = '/swift/' + res.token + '/admin '
             }
         })
