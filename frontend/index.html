@@ -8,115 +8,179 @@
     <title>Document</title>
     <link rel="stylesheet" href="index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- CSS only -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
 </head>
 
-<body class="container">
-    <header>
-        <img src="images/swiftlogo300 (1).png" />
-        <p class="hamburger" id="open">&#x2630;</p>
+<body>
+    <header class="container-fluid">
+        <img src="images/mainLogoSwift.png" />
+        <p class="hamburger" id="open">
+            &#x2630;
+        </p>
 
         <div>
             <ol>
-                <li id="apply">apply</li>
+                <li id="apply">Apply</li>
+                <li id="about-btn">About</li>
                 <li>
-                    <a href="#contact">contact</a></li>
-                <li id="about-btn">about</li>
+                    <a href="#contact">Contact</a>
+                </li>
             </ol>
         </div>
     </header>
-    <nav id="nav">
+    <nav id="nav" class="container">
         <div>
-            <ul>
+            <ul class="hamUl">
                 <li>
-                    <a href="#application">apply</a>
+                    <a href="#application">Apply</a>
                 </li>
                 <li>
-                    <a href="#about">about</a>
+                    <a href="#about">About</a>
                 </li>
                 <li>
-                    <a href="#contact">contact</a>
+                    <a href="#contact">Contact</a>
                 </li>
             </ul>
         </div>
     </nav>
-    <main>
-        <div class="homepage">
-            <div class="about-section" id="about">
-                <img class="mainimg" src='images/4565.jpg'>
-                <div class="about">
-                    <h3>"About"</h3>
-                    <blockquote>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor accusamus hic earum temporibus, corrupti provident animi aspernatur molestiae sunt. Quas explicabo reiciendis voluptas illum quae dolorem repudiandae accusamus suscipit id!</blockquote>
-                </div>
+    <div class="container-fluid">
+        <main>
+            <div class="homepage">
+                <div class="about-section" id="about">
+                    <img class="mainimg" src='images/4565.jpg'>
+                    <div class="about">
+                        <h3 class="wordabout">About</h3>
+                        <p>
+                            <span>"</span> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor accusamus hic earum temporibus, corrupti provident animi aspernatur molestiae sunt. Quas explicabo reiciendis voluptas illum quae dolorem repudiandae
+                            accusamus suscipit id! <span>"</span>
+                        </p>
+                    </div>
 
-            </div>
-            <div class="apply" id="application">
-                <h2>Swiftjob Application</h2><br>
-                <img src="images/undraw_Working_re_ddwy.png">
-                <form action="/swift/applications" method="POST" encType="multipart/form-data">
-                    <input type="text " name="name" required placeholder=" middle name " /><br>
-                    <input type="text " name="first" required placeholder=" first name " /><br>
-                    <input type="text " name="last" required placeholder=" last name " />
-                    <br>
-                    <input type="text" name="address" required placeholder=" address " /><br>
-                    <input type="text" name="city" required placeholder=" city " /><br>
-                    <input type="text" name="state" required placeholder='  state' /><br>
-                    <input type="text" name="zipcode" required placeholder=" zip code " /><br>
-                    <input type="email" name="email" required placeholder=" email address " /><br>
-                    <input type="number" name="ssn" maxlength="9" required placeholder=" ssn(social security number) " />
-                    <br>
-                    <select name="employmentType">
-                        <option value="full time">full time</option>
-                        <option value="part time">part time</option>
-                        <option value="work at home">work at home</option>
-                    
-                      </select>
-                    <br>
-                    <div>drivers license (front, max:200kb):<br><input type="file" id="file1" name="licenseFront" /></div><br>
-                    <div>drivers license (back, max:200kb):<br><input type="file" id="file2" name="licenseBack" required/></div><br>
-                    <div>upload resume (max:200kb): <br><input type="file" id="file3" name="resume" required/></div><br>
-                    <input class="btn " type="submit" value="submit"> </form>
-            </div>
-            <br>
-            <div id="testimony">
-                <h3>"Testimonials"</h3>
-                <br>
-                <div class="center">
-                    <div class="testimonials">
+                </div>
+                <div class="apply" id="application">
+
+                    <img class="applyimg" src="images/undraw_Working_re_ddwy.png">
+                    <form action="/swift/applications" method="POST" encType="multipart/form-data">
+                        <h2 class="applytitle">
+                            Swiftjob Application
+                        </h2>
+                        <input type="text" name="first" placeholder="first name" required/>
+                        <br>
+                        <input type="text" name="name" placeholder="middle name" required/>
+                        <br>
+                        <input type="text" name="last" placeholder="last name" required/>
+                        <br>
+                        <input type="text" name="address" placeholder="address" required/>
+                        <br>
+                        <input type="text" name="city" placeholder="city" required/>
+                        <br>
+                        <input type="text" name="state" placeholder='state' required/>
+                        <br>
+                        <input type="text" name="zipcode" placeholder="zip code" required/>
+                        <br>
+                        <input type="email" name="email" placeholder="email address" required/>
+                        <br>
+                        <input type="number" name="ssn" maxlength="9" placeholder="ssn(social security number)" required/>
+                        <br>
                         <div>
-                            <img class="round" src="images/young-mixed-race-woman-office-236609.jpg" alt=" ">
-                            <blockquote>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum dolore tenetur, aliquam, veritatis sed necessitatibus modi eum voluptatibus quos dolorem deleniti quo ullam illum id accusamus officia hic omnis dolor?</blockquote>
+                            <label for="select">Type of employment:</label><br>
+                            <select name="employmentType">
+                                <option value="full time">full time</option>
+                                <option value="part time">part time</option>
+                                <option value="work at home">work at home</option>
+                                </select>
                         </div>
                         <div>
-                            <img class="round" src="images/young-mixed-race-woman-office-236609.jpg" alt=" ">
-                            <blockquote>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae voluptate vel ad adipisci dolore rerum cumque labore ratione tempora autem! Quasi voluptas eum magnam exercitationem neque .</blockquote>
+                            drivers license (front, max:200kb jpg):
+                            <br>
+                            <input type="file" id="file1" name="licenseFront" />
                         </div>
                         <div>
-                            <img class="round " src="images/young-mixed-race-woman-office-236609.jpg" alt=" ">
-                            <blockquote>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, ducimus minus ratione dolorum aut sint nulla at provident culpa. Excepturi itaque consectetur accusantium laborum voluptatem ullam repellat ?</blockquote>
+                            drivers license (back, max:200kb jpg):
+                            <br>
+                            <input type="file" id="file2" name="licenseBack" required/>
+                        </div>
+                        <div>
+                            upload resume (max:200kb jpg): <br><input type="file" id="file3" name="resume" required/>
+                        </div>
+                        <input class="btn" type="submit" value="submit">
+                    </form>
+                </div>
+                <div id="testimony">
+                    <h3>Testimonials</h3>
+                    <div>
+                        <div id="testiwrap">
+
+                            <div class="testisection">
+                                <figure class="testitext">
+                                    <img class="testimg" src=" images/young-mixed-race-woman-office-236609.jpg" alt="">
+                                    <span>" </span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti numquam non excepturi temporibus veniam id, illo enim dignissimos odit sequi reprehenderit aspernatur consectetur ipsum laboriosam expedita
+                                    <span>"</span>
+                                    <figcaption>
+                                        ~ louis plein
+                                    </figcaption>
+                                </figure>
+
+                            </div>
+                            <div class="testisection">
+                                <figure class="testitext">
+                                    <img class="testimg" src=" images/young-mixed-race-woman-office-236609.jpg" alt="">
+                                    <span>" </span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti numquam non excepturi temporibus veniam id, illo enim dignissimos odit sequi reprehenderit aspernatur consectetur ipsum laboriosam expedita
+                                    <span>"</span>
+                                    <figcaption>
+                                        ~ louis plein
+                                    </figcaption>
+                                </figure>
+
+                            </div>
+                            <div class="testisection">
+                                <figure class="testitext">
+                                    <img class="testimg" src=" images/young-mixed-race-woman-office-236609.jpg" alt="">
+                                    <span>" </span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti numquam non excepturi temporibus veniam id, illo enim dignissimos odit sequi reprehenderit aspernatur consectetur ipsum laboriosam expedita
+                                    <span>"</span>
+                                    <figcaption>
+                                        ~ louis plein
+                                    </figcaption>
+                                </figure>
+
+                            </div>
                         </div>
                     </div>
                 </div>
+
             </div>
 
-        </div>
 
-
-        </div>
+    </div>
 
     </main>
+    </div>
     <br>
-    <footer class="center col " id='contact'>
-        <h3>copyright &copy; swiftjobapply</h3><br>
-        <div class="center ">
-            <img src="images/download-removebg-preview.png" alt=" ">
-            <img src="images/twitter-removebg-preview.png" alt=" ">
-            <img src="images/instagram-removebg-preview.png" alt=" ">
+    <footer id='contact'>
+        <div id="footerwrap">
+            <div>
+                <a href="" target="_blank">
+                    <img class="footerimg" src="images/download-removebg-preview.png" alt="">
+                </a>
+                <a href="" target="_blank">
+                    <img class="footerimg" src="images/twitter-removebg-preview.png" alt="">
+                </a>
+                <a href="" target="_blank">
+                    <img class="footerimg" src="images/instagram-removebg-preview.png" alt="">
+                </a>
+            </div>
+            <div id="disclaimer">
+                <span id="footerspan">Disclaimer:</span> In no event will we be liable for any loss or damage including without limitation, indirect or consequential loss or damage, or any loss or damage whatsoever arising from loss of data or profits
+                arising out of, or in connection with, the u use of this website. The designer and the developer are hereby not resposible for the content of this site and useage of the data provided.
+            </div>
+        </div>
+        <div id="bottom-bar">
+            <p>copyright &copy 2021, All rights reserved.</p>
         </div>
     </footer>
 </body>
-<script src="Index.js "></script>
+<script src="Index.js"></script>
 
 </html>
