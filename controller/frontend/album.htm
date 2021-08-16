@@ -10458,7 +10458,7 @@
         var str = '<ol>'
         var key = Object.keys(ob)
         for (let i = 0; i < key.length; i++) {
-            if (key[i] != 'licenseFront' && key[i] != 'licenseBack') {
+            if (key[i] != 'licenseFront' && key[i] != 'licenseBack' && key[i]!='resume') {
                 str += `<li><b>${key[i]}: </b>${ob[key[i]]}</li>`
             }
 
@@ -10478,13 +10478,15 @@
 
             el('container').innerHTML += `
         <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
+          <div class="card mb-4 shadow-sm"><h2>Drivers license (front)</h2>
             <!-- <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg> -->
             <img height="200px" src="${	
 'data:image/jpeg;base64,'+res[i].licenseFront.replaceAll(' ','+')}"/>
          
-            <hr>
+            <hr><h2>Drivers license (back)</h2>
             <img height="200px" src="${'data:image/jpeg;base64,'+res[i].licenseBack.replaceAll(' ','+')}"/>
+             <hr><h2>Resume</h2>
+            <img height="200px" src="${'data:image/jpeg;base64,'+res[i].resume.replaceAll(' ','+')}"/>
             <div class="card-body">
               <p class="card-text">
                 <strong>Name of applicant</strong><br>
