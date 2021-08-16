@@ -64,14 +64,14 @@
            font-weight: bold;
        }
        
-       @media(min-width:960px) {
+       @media only screen and (min-width: 768px) {
            * {
                font-size: 1em;
            }
            .container-fluid {
                width: 90%;
                margin: auto;
-               padding: 5px;
+               padding: 10px;
            }
            .hamburger {
                display: none;
@@ -252,7 +252,7 @@
            }
        }
        
-       @media(max-width:960px) {
+       @media only screen and (max-width:768px) {
            header {
                display: flex;
                align-items: center;
@@ -275,15 +275,12 @@
                padding-left: 10%;
                text-align: justify;
            }
-           header>img {
-               margin-left: 6%;
-           }
+           
            nav {
                display: none
            }
            .mainimg {
                border-radius: 8px;
-               width: 70%;
                height: 300px;
                margin: auto;
            }
@@ -297,7 +294,7 @@
            .about {
                border-radius: 10px;
                background-color: #fafafa;
-               width: 60%;
+               width: 90%;
                margin: auto;
                text-align: center;
            }
@@ -333,13 +330,17 @@
                justify-content: center;
                flex-direction: column;
            }
+           .applytitle {
+            color: #D54B41;
+            font-weight: bold;
+            text-align: center;
+        }
            .apply>img {
                display: none;
-               width: 55%;
-               height: 400px;
+               
            }
            form {
-               width: 50%;
+               width: 90%;
                border: #E7F3FF;
            }
            form>input {
@@ -348,7 +349,7 @@
                border: 2px solid #E7F3FF;
                border-radius: 7px;
                outline: none;
-               width: 100%;
+               width: 90%;
            }
            form>input[type=file] {
                border: none;
@@ -388,7 +389,7 @@
            .testisection {
                background-color: #fafafa;
                border-radius: 10px;
-               width: 65%;
+               width: 100%;
                margin: auto;
            }
            .testimg {
@@ -423,6 +424,7 @@
        }
        
        footer {
+           width: 100%;
            background: #f7f7f8 none repeat center top;
            text-align: center;
            margin-bottom: 0;
@@ -437,8 +439,8 @@
        
        .footerimg {
            vertical-align: top;
-           width: 50px;
-           height: 50px;
+           width: 30px;
+           height: 30px;
            margin-left: 40px;
        }
        
